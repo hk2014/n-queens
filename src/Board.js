@@ -164,13 +164,7 @@
       var n = this.get('n');
       var count = 0;
 
-      // for (var i = 0; i < n; i++) {
-      //   if (this.hasMajorDiagonalConflictAt(i)) {
-      //     count++;
-      //   }
-      // }
       for (var i = 0 - n; i < n; i++) {
-        console.log(i);
         if (this.hasMajorDiagonalConflictAt(i)) {
           count++;
         }
@@ -195,8 +189,7 @@
         if (arr[colIndex]) {
           count++;
         }
-        colIndex--;
-        
+        colIndex--;    
       }
       
       return count > 1; // fixme
@@ -207,7 +200,7 @@
       var n = this.get('n');
       var count = 0;
 
-      for (var i = 0; i < n; i++) {
+      for (var i = n + n; i >= 0; i--) {
         if (this.hasMinorDiagonalConflictAt(i)) {
           count++;
         }
